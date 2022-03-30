@@ -38,41 +38,34 @@ from smdebug.profiler.utils import str2bool
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+def test(model, test_loader, criterion, hook):
+       
+    # Setting the SMDebug hook for the testing / validation phase. 
+    
+    hook.set_mode(smd.modes.EVAL)
+    model.eval() #setting the model in evaluation mode
 
-def test(model, test_loader, criterion, epochs, hook):
-    for e in range(epochs):
-        print('Epoch ', e + 1, '/', epochs)
-        
-        model.eval() #setting the model in evaluation mode
-        
-        # Setting the SMDebug hook for the testing / validation phase. 
-        
-        hook.set_mode(smd.modes.EVAL)
-        correct = 0
-        num_batches = 0
-        running_loss = 0.0
-                
-        with torch.no_grad():
-            for batch_idx, (inputs, labels) in enumerate(test_loader):
-                inputs, labels = inputs.to(device), labels.to(device)
-                outputs = model(inputs)
-                loss = criterion(outputs, labels)
-
-                # Record the correct predictions for training data
-                running_loss += loss.item() # Accumulate the loss 
-                _, predicted = torch.max(outputs, 1)
-                correct += (predicted == labels).sum() 
-                num_batches += 1
-                
-
-            # Record the testing loss and accuracy
-            total_loss = running_loss / num_batches
-            total_acc = correct / len(test_loader.dataset)
+    correct = 0
+    running_loss = 0.0
             
-            print(f'Test Correct: {correct}')
-            print(f'Test batch number: {num_batches}')
-            print(f"Test Accuracy: {100*total_acc}, Test set: Average loss: {total_loss} at epoch: {e+1}")
+    with torch.no_grad():
+        for batch_idx, (inputs, labels) in enumerate(test_loader):
+            inputs, labels = inputs.to(device), labels.to(device)
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
 
+            # Record the correct predictions for training data
+            running_loss += loss.item() # Accumulate the loss 
+            _, predicted = torch.max(outputs, 1)
+            correct += (predicted == labels).sum() 
+
+    # Record the testing loss and accuracy
+    total_loss = running_loss / len(test_loader.dataset)
+    total_acc = correct / len(test_loader.dataset)
+    
+    print(f'Test Correct: {correct}')
+    print(f"Test Accuracy: {100*total_acc}, Test set: Average loss: {total_loss}")
+    
 def train(model, train_loader, validation_loader, criterion, optimizer, epochs, hook):
     
     epoch_times = []
@@ -80,80 +73,43 @@ def train(model, train_loader, validation_loader, criterion, optimizer, epochs, 
     if hook:
         hook.register_loss(criterion)
     
-    for e in range(epochs):
-        print("START TRAINING")
-        print('Epoch ', e + 1, '/', epochs)
-        if hook:
-            hook.set_mode(modes.TRAIN)
-        start = time.time()
-        model.train()
+    
+    print("START TRAINING")
+    if hook:
+        hook.set_mode(modes.TRAIN)
+    start = time.time()
+    model.train()
+    
+    # Setting the SMDebug hook for the training phase. #
+    
+    correct = 0
+    num_batches = 0
+    running_loss = 0.0
+    
+    for batch_idx, (inputs, labels) in enumerate(train_loader):
+        inputs, labels = inputs.to(device), labels.to(device)
+        optimizer.zero_grad() # Reset gradients / slopes of cost w.r.t. the parameters to zero so they don't accumulate in memory. 
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward() #computes gradients
+        optimizer.step() #backprop
         
-        # Setting the SMDebug hook for the training phase. #
+        # Record the correct predictions for training data 
+        running_loss += loss.item() # Accumulate the loss
+        _, predicted = torch.max(outputs, 1)
+        correct += (predicted == labels).sum()
+        num_batches += 1
+        
 
-        # hook.set_mode(smd.modes.TRAIN)
-        correct = 0
-        num_batches = 0
-        running_loss = 0.0
-        
-        for batch_idx, (inputs, labels) in enumerate(train_loader):
-            inputs, labels = inputs.to(device), labels.to(device)
-            optimizer.zero_grad() # Reset gradients / slopes of cost w.r.t. the parameters to zero so they don't accumulate in memory. 
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            loss.backward() #computes gradients
-            optimizer.step() #backprop
-            
-            # Record the correct predictions for training data 
-            running_loss += loss.item() # Accumulate the loss
-            _, predicted = torch.max(outputs, 1)
-            correct += (predicted == labels).sum()
-            num_batches += 1
-            
-
-        # Record the training loss and accuracy
-        total_acc = correct / len(train_loader.dataset)
-        train_loss = running_loss / num_batches
-        
-        print(f'Training Correct: {correct}')
-        print(f'Training batch number: {num_batches}')
-        print(f"Training Accuracy: {100*total_acc}, Training set: Average loss: {train_loss} at epoch: {e+1}")
-        
-        # Setting up our validation
-        
-        print("START VALIDATING")
-        if hook:
-            hook.set_mode(modes.EVAL)
-            
-        correct = 0
-        num_batches = 0
-        running_loss = 0.0
-        model.eval()
-        with torch.no_grad():
-            for batch_idx, (inputs, labels) in enumerate(validation_loader):
-                inputs, labels = inputs.to(device), labels.to(device)
-                outputs = model(inputs)
-                loss = criterion(outputs, labels)
-                
-                # Record the correct predictions for training data 
-                running_loss += loss.item() # Accumulate the loss
-                _, predicted = torch.max(outputs, 1)
-                correct += (predicted == labels).sum()
-                num_batches += 1
-
-            # Record the training loss and accuracy
-            total_acc = correct / len(validation_loader.dataset)
-            val_loss = running_loss / num_batches
-            
-            print(f'Validation Correct: {correct}')
-            print(f'Validation Dataset length at batch: {len(validation_loader.dataset)}')
-            print(f"Validation Accuracy: {100*total_acc}, Validation set: Average loss: {val_loss} at epoch: {e+1}")
-            
-        epoch_time = time.time() - start
-        epoch_times.append(epoch_time)
-        print(
-            "Epoch %d: train loss %.3f, val loss %.3f, in %.1f sec"
-            % (e, train_loss, val_loss, epoch_time)
-        )
+    # Record the training loss and accuracy
+    total_acc = correct / len(train_loader.dataset)
+    train_loss = running_loss / len(train_loader.dataset) # Is this calculation correct?
+    
+    print(f'Training Correct: {correct}')
+    print(f"Training Accuracy: {100*total_acc}, Training set: Average loss: {train_loss}")
+    
+    epoch_time = time.time() - start
+    epoch_times.append(epoch_time)
     
     # calculate training time after all epoch
     p50 = np.percentile(epoch_times, 50)
@@ -318,8 +274,8 @@ def main(args):
         # ===========================================================#
         # Pass the SMDebug hook to the train and test functions. #
         # ===========================================================#
-        train(model, train_loader, validation_loader, criterion, optimizer, epochs, hook)
-        test(model, test_loader, criterion, epochs, hook)
+        train(model, train_loader, validation_loader, criterion, optimizer, epoch, hook)
+        test(model, test_loader, criterion, hook)
 
         # ... train `model`, then save it to `model_dir`
     with open(os.path.join(args.model_dir, 'dogs_classification_hpo.pt'), 'wb') as f:

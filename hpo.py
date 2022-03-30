@@ -14,7 +14,7 @@ import boto3
 # from sagemaker.session import Session
 import sagemaker
 import os
-import s3fs
+# import s3fs
 from pickle import dump
 
 from sagemaker import get_execution_role
@@ -25,7 +25,7 @@ os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
 
 sagemaker_session = sagemaker.Session(boto3.session.Session(region_name='us-east-1'))
 bucket = sagemaker_session.default_bucket()
-
+s3 = boto3.client('s3')
 
 # # pass in the sagemaker session as an argument
 # sagemaker_execution_role = get_execution_role(sagemaker_session=sagemaker_session)
@@ -78,21 +78,27 @@ def test(model, test_loader, criterion, epochs=1): # we don't need epochs for te
             print(f"Test Accuracy: {100*total_acc}, Test set: Average loss: {total_loss} at epoch: {e+1}")
 
 def train(model, train_loader, validation_loader, criterion, optimizer, epochs):
-    
-    class_pickle_filename = "dog_breeds_labels.pkl"
-    pickle_path = "./opt/ml/output/"
 
+    pickle_path = "/opt/ml/output/"
+    class_pickle_filename = "dog_breeds_labels.pkl"
+    saved_data = os.path.join(pickle_path, class_pickle_filename)
     class_names = [item[4:].replace("_", " ") for item in train_loader.dataset.classes]
     
     print("Printing and saving classes: \n")
-    print(class_names)
+    print(class_names[:5])
     print(f"Saving to this directory: {pickle_path}")
-
-    with open(os.path.join(pickle_path, class_pickle_filename), 'wb') as f:
+    
+    # save as a pickle file
+    with open(saved_data, 'wb') as f:
         dump(class_names, f)
 
-    # Copying the file to an s3 bucket
-    ! aws s3 cp {pickle_path}{class_pickle_filename} s3://{bucket}/dogImages/classes/
+    # Save it to s3 | see boto3 docs here: https://bit.ly/3IQXCFh
+    with open(saved_data, 'rb') as data:
+        s3.upload_fileobj(data, bucket, f'dogImages/classes/{class_pickle_filename}')
+    
+    
+#     # Copying the file to an s3 bucket
+#     ! aws s3 cp {pickle_path}{class_pickle_filename} s3://{bucket}/dogImages/classes/
     
     for e in range(epochs):
         print('Epoch ', e + 1, '/', epochs)
@@ -378,7 +384,7 @@ if __name__=='__main__':
     parser.add_argument(
         "--epochs",
         type=int,
-        default=10, # change as needed
+        default=5, # change as needed
         metavar="N",
         help="number of epochs to train (default: 10)",
     )
