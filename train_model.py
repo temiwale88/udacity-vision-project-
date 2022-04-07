@@ -9,7 +9,18 @@ import torchvision.models as models
 import torchvision.transforms as transforms
 import torch.nn.functional as F
 from torchvision import datasets
-import boto3
+
+try: 
+    import boto3
+except:
+    !pip install boto3
+    print("boto3 is not available in current container, skipping...")
+
+try: 
+    import smdebug.pytorch as smd
+except:
+    print("smd is not available in current container, skipping...")
+
 
 import sagemaker
 import os
@@ -32,7 +43,6 @@ import time
 #TODO: Import dependencies for Debugging andd Profiling
 
 from smdebug import modes
-import smdebug.pytorch as smd
 from smdebug.pytorch import get_hook
 from smdebug.profiler.utils import str2bool
 

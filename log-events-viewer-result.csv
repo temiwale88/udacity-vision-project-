@@ -1,0 +1,201 @@
+timestamp,message,logStreamName
+1649359264243,"2022-04-07 19:21:03,803 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager - Initializing plugins manager...",AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,"2022-04-07 19:21:04,170 [INFO ] main org.pytorch.serve.ModelServer - ",AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Torchserve version: 0.4.0,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,TS Home: /opt/conda/lib/python3.6/site-packages,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Current directory: /,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Temp directory: /home/model-server/tmp,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Number of GPUs: 0,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Number of CPUs: 1,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Max heap size: 767 M,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Python executable: /opt/conda/bin/python3.6,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Config file: /etc/sagemaker-ts.properties,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Inference address: http://0.0.0.0:8080,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Management address: http://0.0.0.0:8080,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Metrics address: http://127.0.0.1:8082,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Model Store: /.sagemaker/ts/models,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Initial Models: model.mar,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Log dir: /logs,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Metrics dir: /logs,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Netty threads: 0,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Netty client threads: 0,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Default workers per model: 1,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Blacklist Regex: N/A,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Maximum Response Size: 6553500,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Maximum Request Size: 6553500,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Prefer direct buffer: false,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Allowed Urls: [file://.*|http(s)?://.*],AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Custom python dependency for model allowed: false,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Metrics report format: prometheus,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Enable metrics API: true,AllTraffic/i-06c6ed3f3df7c235b
+1649359264243,Workflow Store: /.sagemaker/ts/models,AllTraffic/i-06c6ed3f3df7c235b
+1649359264493,"2022-04-07 19:21:04,198 [INFO ] main org.pytorch.serve.servingsdk.impl.PluginsManager -  Loading snapshot serializer plugin...",AllTraffic/i-06c6ed3f3df7c235b
+1649359264744,"2022-04-07 19:21:04,269 [INFO ] main org.pytorch.serve.ModelServer - Loading initial models: model.mar",AllTraffic/i-06c6ed3f3df7c235b
+1649359264744,"2022-04-07 19:21:04,500 [INFO ] main org.pytorch.serve.wlm.ModelManager - Model model loaded.",AllTraffic/i-06c6ed3f3df7c235b
+1649359264744,"2022-04-07 19:21:04,520 [INFO ] main org.pytorch.serve.ModelServer - Initialize Inference server with: EpollServerSocketChannel.",AllTraffic/i-06c6ed3f3df7c235b
+1649359264744,"2022-04-07 19:21:04,716 [INFO ] main org.pytorch.serve.ModelServer - Inference API bind to: http://0.0.0.0:8080",AllTraffic/i-06c6ed3f3df7c235b
+1649359264744,"2022-04-07 19:21:04,716 [INFO ] main org.pytorch.serve.ModelServer - Initialize Metrics server with: EpollServerSocketChannel.",AllTraffic/i-06c6ed3f3df7c235b
+1649359265542,"2022-04-07 19:21:04,724 [INFO ] main org.pytorch.serve.ModelServer - Metrics API bind to: http://127.0.0.1:8082",AllTraffic/i-06c6ed3f3df7c235b
+1649359265542,Model server started.,AllTraffic/i-06c6ed3f3df7c235b
+1649359265555,"2022-04-07 19:21:05,383 [WARN ] pool-2-thread-1 org.pytorch.serve.metrics.MetricCollector - worker pid is not available yet.",AllTraffic/i-06c6ed3f3df7c235b
+1649359265555,"2022-04-07 19:21:05,541 [INFO ] pool-2-thread-1 TS_METRICS - CPUUtilization.Percent:0.0|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265555,"2022-04-07 19:21:05,542 [INFO ] pool-2-thread-1 TS_METRICS - DiskAvailable.Gigabytes:38.275089263916016|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265571,"2022-04-07 19:21:05,543 [INFO ] pool-2-thread-1 TS_METRICS - DiskUsage.Gigabytes:12.466411590576172|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265571,"2022-04-07 19:21:05,545 [INFO ] pool-2-thread-1 TS_METRICS - DiskUtilization.Percent:24.6|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265571,"2022-04-07 19:21:05,545 [INFO ] pool-2-thread-1 TS_METRICS - MemoryAvailable.Megabytes:2772.484375|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265571,"2022-04-07 19:21:05,546 [INFO ] pool-2-thread-1 TS_METRICS - MemoryUsed.Megabytes:911.94921875|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265792,"2022-04-07 19:21:05,547 [INFO ] pool-2-thread-1 TS_METRICS - MemoryUtilization.Percent:29.7|#Level:Host|#hostname:container-0.local,timestamp:1649359265",AllTraffic/i-06c6ed3f3df7c235b
+1649359265792,"2022-04-07 19:21:05,750 [INFO ] W-9000-model_1-stdout MODEL_LOG - Listening on port: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359265792,"2022-04-07 19:21:05,751 [INFO ] W-9000-model_1-stdout MODEL_LOG - [PID]35",AllTraffic/i-06c6ed3f3df7c235b
+1649359265792,"2022-04-07 19:21:05,751 [INFO ] W-9000-model_1-stdout MODEL_LOG - Torch worker started.",AllTraffic/i-06c6ed3f3df7c235b
+1649359265792,"2022-04-07 19:21:05,752 [INFO ] W-9000-model_1-stdout MODEL_LOG - Python runtime: 3.6.13",AllTraffic/i-06c6ed3f3df7c235b
+1649359265792,"2022-04-07 19:21:05,758 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Connecting to: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:05,785 [INFO ] W-9000-model_1-stdout MODEL_LOG - Connection accepted: /home/model-server/tmp/.ts.sock.9000.",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,002 [INFO ] W-9000-model_1-stdout MODEL_LOG - boto3 and smd are not available in current container, skipping...",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,003 [INFO ] W-9000-model_1-stdout MODEL_LOG - Backend worker process died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,004 [INFO ] W-9000-model_1-stdout MODEL_LOG - Traceback (most recent call last):",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,004 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 182, in <module>",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,006 [INFO ] W-9000-model_1-stdout MODEL_LOG -     worker.run_server()",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,008 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 154, in run_server",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,008 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self.handle_connection(cl_socket)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266043,"2022-04-07 19:21:06,009 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 116, in handle_connection",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,009 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service, result, code = self.load_model(msg)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,009 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 89, in load_model",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,010 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service = model_loader.load(model_name, model_dir, handler, gpu, batch_size, envelope)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,010 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_loader.py"", line 110, in load",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,014 [INFO ] W-9000-model_1-stdout MODEL_LOG -     initialize_fn(service.context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,015 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/home/model-server/tmp/models/b09af23583a34b00b8b43bd273020fc5/handler_service.py"", line 51, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,015 [INFO ] W-9000-model_1-stdout MODEL_LOG -     super().initialize(context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,023 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/default_handler_service.py"", line 66, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,023 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self._service.validate_and_initialize(model_dir=model_dir)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,024 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/transformer.py"", line 157, in validate_and_initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,024 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self._validate_user_module_and_set_functions()",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,024 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/transformer.py"", line 170, in _validate_user_module_and_set_functions",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,025 [INFO ] W-9000-model_1-stdout MODEL_LOG -     user_module = importlib.import_module(user_module_name)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,025 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/importlib/__init__.py"", line 126, in import_module",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,025 [INFO ] W-9000-model_1-stdout MODEL_LOG -     return _bootstrap._gcd_import(name[level:], package, level)",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,025 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 994, in _gcd_import",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,026 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 971, in _find_and_load",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,026 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 955, in _find_and_load_unlocked",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,026 [INFO ] epollEventLoopGroup-5-1 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_STARTED",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,031 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.BatchAggregator - Load model failed: model, error: Worker died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,032 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-model_1-stderr",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,032 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-model_1-stdout",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,033 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9000 in 1 seconds.",AllTraffic/i-06c6ed3f3df7c235b
+1649359266063,"2022-04-07 19:21:06,027 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 665, in _load_unlocked",AllTraffic/i-06c6ed3f3df7c235b
+1649359266543,"2022-04-07 19:21:06,034 [INFO ] W-9000-model_1-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-model_1-stdout",AllTraffic/i-06c6ed3f3df7c235b
+1649359267798,"2022-04-07 19:21:06,315 [INFO ] W-9000-model_1-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-model_1-stderr",AllTraffic/i-06c6ed3f3df7c235b
+1649359267798,"2022-04-07 19:21:07,635 [INFO ] W-9000-model_1-stdout MODEL_LOG - Listening on port: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359267798,"2022-04-07 19:21:07,636 [INFO ] W-9000-model_1-stdout MODEL_LOG - [PID]85",AllTraffic/i-06c6ed3f3df7c235b
+1649359267798,"2022-04-07 19:21:07,637 [INFO ] W-9000-model_1-stdout MODEL_LOG - Torch worker started.",AllTraffic/i-06c6ed3f3df7c235b
+1649359267798,"2022-04-07 19:21:07,637 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Connecting to: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359267798,"2022-04-07 19:21:07,638 [INFO ] W-9000-model_1-stdout MODEL_LOG - Python runtime: 3.6.13",AllTraffic/i-06c6ed3f3df7c235b
+1649359268048,"2022-04-07 19:21:07,650 [INFO ] W-9000-model_1-stdout MODEL_LOG - Connection accepted: /home/model-server/tmp/.ts.sock.9000.",AllTraffic/i-06c6ed3f3df7c235b
+1649359268048,"2022-04-07 19:21:07,807 [INFO ] W-9000-model_1-stdout MODEL_LOG - boto3 and smd are not available in current container, skipping...",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,807 [INFO ] W-9000-model_1-stdout MODEL_LOG - Backend worker process died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,808 [INFO ] W-9000-model_1-stdout MODEL_LOG - Traceback (most recent call last):",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,808 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 182, in <module>",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,809 [INFO ] W-9000-model_1-stdout MODEL_LOG -     worker.run_server()",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,809 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 154, in run_server",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,811 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self.handle_connection(cl_socket)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,811 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 116, in handle_connection",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,811 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service, result, code = self.load_model(msg)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,812 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 89, in load_model",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,812 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service = model_loader.load(model_name, model_dir, handler, gpu, batch_size, envelope)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,812 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_loader.py"", line 110, in load",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,813 [INFO ] W-9000-model_1-stdout MODEL_LOG -     initialize_fn(service.context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,814 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/home/model-server/tmp/models/b09af23583a34b00b8b43bd273020fc5/handler_service.py"", line 51, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,814 [INFO ] W-9000-model_1-stdout MODEL_LOG -     super().initialize(context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,814 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/default_handler_service.py"", line 66, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,815 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self._service.validate_and_initialize(model_dir=model_dir)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,816 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/transformer.py"", line 157, in validate_and_initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,816 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self._validate_user_module_and_set_functions()",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,817 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/transformer.py"", line 170, in _validate_user_module_and_set_functions",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,817 [INFO ] W-9000-model_1-stdout MODEL_LOG -     user_module = importlib.import_module(user_module_name)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,817 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/importlib/__init__.py"", line 126, in import_module",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,817 [INFO ] W-9000-model_1-stdout MODEL_LOG -     return _bootstrap._gcd_import(name[level:], package, level)",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,817 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 994, in _gcd_import",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,818 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 971, in _find_and_load",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,819 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 955, in _find_and_load_unlocked",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,819 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 665, in _load_unlocked",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,819 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap_external>"", line 678, in exec_module",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,820 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 219, in _call_with_frames_removed",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,820 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/ml/model/code/train_model.py"", line 19, in <module>",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,820 [INFO ] W-9000-model_1-stdout MODEL_LOG -     import sagemaker",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,823 [INFO ] W-9000-model_1-stdout MODEL_LOG - ModuleNotFoundError: No module named 'sagemaker'",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,824 [INFO ] epollEventLoopGroup-5-2 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_STARTED",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,825 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.BatchAggregator - Load model failed: model, error: Worker died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,825 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-model_1-stderr",AllTraffic/i-06c6ed3f3df7c235b
+1649359268049,"2022-04-07 19:21:07,825 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-model_1-stdout",AllTraffic/i-06c6ed3f3df7c235b
+1649359268299,"2022-04-07 19:21:07,826 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9000 in 1 seconds.",AllTraffic/i-06c6ed3f3df7c235b
+1649359268299,"2022-04-07 19:21:08,194 [INFO ] W-9000-model_1-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-model_1-stderr",AllTraffic/i-06c6ed3f3df7c235b
+1649359268549,"2022-04-07 19:21:08,194 [INFO ] W-9000-model_1-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-model_1-stdout",AllTraffic/i-06c6ed3f3df7c235b
+1649359268549,"2022-04-07 19:21:08,422 [INFO ] W-9000-model_1 ACCESS_LOG - /169.254.178.2:59858 ""GET /ping HTTP/1.1"" 200 25",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:08,422 [INFO ] W-9000-model_1 TS_METRICS - Requests2XX.Count:1|#Level:Host|#hostname:container-0.local,timestamp:null",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,491 [INFO ] W-9000-model_1-stdout MODEL_LOG - Listening on port: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,493 [INFO ] W-9000-model_1-stdout MODEL_LOG - [PID]100",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,493 [INFO ] W-9000-model_1-stdout MODEL_LOG - Torch worker started.",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,495 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Connecting to: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,497 [INFO ] W-9000-model_1-stdout MODEL_LOG - Python runtime: 3.6.13",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,498 [INFO ] W-9000-model_1-stdout MODEL_LOG - Connection accepted: /home/model-server/tmp/.ts.sock.9000.",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,655 [INFO ] W-9000-model_1-stdout MODEL_LOG - boto3 and smd are not available in current container, skipping...",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,656 [INFO ] W-9000-model_1-stdout MODEL_LOG - Backend worker process died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,656 [INFO ] W-9000-model_1-stdout MODEL_LOG - Traceback (most recent call last):",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,656 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 182, in <module>",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,657 [INFO ] W-9000-model_1-stdout MODEL_LOG -     worker.run_server()",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,657 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 154, in run_server",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,658 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self.handle_connection(cl_socket)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,658 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 116, in handle_connection",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,659 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service, result, code = self.load_model(msg)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,659 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 89, in load_model",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,660 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service = model_loader.load(model_name, model_dir, handler, gpu, batch_size, envelope)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_loader.py"", line 110, in load",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -     initialize_fn(service.context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/home/model-server/tmp/models/b09af23583a34b00b8b43bd273020fc5/handler_service.py"", line 51, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -     super().initialize(context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/default_handler_service.py"", line 66, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self._service.validate_and_initialize(model_dir=model_dir)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/transformer.py"", line 157, in validate_and_initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self._validate_user_module_and_set_functions()",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/transformer.py"", line 170, in _validate_user_module_and_set_functions",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -     user_module = importlib.import_module(user_module_name)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/importlib/__init__.py"", line 126, in import_module",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -     return _bootstrap._gcd_import(name[level:], package, level)",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,669 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 994, in _gcd_import",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 971, in _find_and_load",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 955, in _find_and_load_unlocked",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 665, in _load_unlocked",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap_external>"", line 678, in exec_module",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""<frozen importlib._bootstrap>"", line 219, in _call_with_frames_removed",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/ml/model/code/train_model.py"", line 19, in <module>",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG -     import sagemaker",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,670 [INFO ] W-9000-model_1-stdout MODEL_LOG - ModuleNotFoundError: No module named 'sagemaker'",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,677 [INFO ] epollEventLoopGroup-5-1 org.pytorch.serve.wlm.WorkerThread - 9000 Worker disconnected. WORKER_STARTED",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,678 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.BatchAggregator - Load model failed: model, error: Worker died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,678 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-model_1-stderr",AllTraffic/i-06c6ed3f3df7c235b
+1649359269687,"2022-04-07 19:21:09,679 [WARN ] W-9000-model_1 org.pytorch.serve.wlm.WorkerLifeCycle - terminateIOStreams() threadName=W-9000-model_1-stdout",AllTraffic/i-06c6ed3f3df7c235b
+1649359270187,"2022-04-07 19:21:09,679 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Retry worker: 9000 in 2 seconds.",AllTraffic/i-06c6ed3f3df7c235b
+1649359270187,"2022-04-07 19:21:10,095 [INFO ] W-9000-model_1-stderr org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-model_1-stderr",AllTraffic/i-06c6ed3f3df7c235b
+1649359272456,"2022-04-07 19:21:10,095 [INFO ] W-9000-model_1-stdout org.pytorch.serve.wlm.WorkerLifeCycle - Stopped Scanner - W-9000-model_1-stdout",AllTraffic/i-06c6ed3f3df7c235b
+1649359272456,"2022-04-07 19:21:12,338 [INFO ] W-9000-model_1-stdout MODEL_LOG - Listening on port: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359272456,"2022-04-07 19:21:12,340 [INFO ] W-9000-model_1-stdout MODEL_LOG - [PID]113",AllTraffic/i-06c6ed3f3df7c235b
+1649359272456,"2022-04-07 19:21:12,340 [INFO ] W-9000-model_1-stdout MODEL_LOG - Torch worker started.",AllTraffic/i-06c6ed3f3df7c235b
+1649359272456,"2022-04-07 19:21:12,341 [INFO ] W-9000-model_1 org.pytorch.serve.wlm.WorkerThread - Connecting to: /home/model-server/tmp/.ts.sock.9000",AllTraffic/i-06c6ed3f3df7c235b
+1649359272456,"2022-04-07 19:21:12,341 [INFO ] W-9000-model_1-stdout MODEL_LOG - Python runtime: 3.6.13",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,343 [INFO ] W-9000-model_1-stdout MODEL_LOG - Connection accepted: /home/model-server/tmp/.ts.sock.9000.",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,498 [INFO ] W-9000-model_1-stdout MODEL_LOG - boto3 and smd are not available in current container, skipping...",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,498 [INFO ] W-9000-model_1-stdout MODEL_LOG - Backend worker process died.",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,499 [INFO ] W-9000-model_1-stdout MODEL_LOG - Traceback (most recent call last):",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,499 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 182, in <module>",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,499 [INFO ] W-9000-model_1-stdout MODEL_LOG -     worker.run_server()",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,499 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 154, in run_server",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,499 [INFO ] W-9000-model_1-stdout MODEL_LOG -     self.handle_connection(cl_socket)",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,499 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 116, in handle_connection",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,500 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service, result, code = self.load_model(msg)",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,500 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_service_worker.py"", line 89, in load_model",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,500 [INFO ] W-9000-model_1-stdout MODEL_LOG -     service = model_loader.load(model_name, model_dir, handler, gpu, batch_size, envelope)",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,501 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/ts/model_loader.py"", line 110, in load",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,501 [INFO ] W-9000-model_1-stdout MODEL_LOG -     initialize_fn(service.context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,502 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/home/model-server/tmp/models/b09af23583a34b00b8b43bd273020fc5/handler_service.py"", line 51, in initialize",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,502 [INFO ] W-9000-model_1-stdout MODEL_LOG -     super().initialize(context)",AllTraffic/i-06c6ed3f3df7c235b
+1649359272707,"2022-04-07 19:21:12,502 [INFO ] W-9000-model_1-stdout MODEL_LOG -   File ""/opt/conda/lib/python3.6/site-packages/sagemaker_inference/default_handler_service.py"", line 66, in initialize",AllTraffic/i-06c6ed3f3df7c235b
