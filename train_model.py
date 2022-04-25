@@ -9,11 +9,9 @@ import torchvision.models as models
 import torchvision.transforms as transforms
 import torch.nn.functional as F
 from torchvision import datasets
-
 try: 
     import boto3
 except:
-    !pip install boto3
     print("boto3 is not available in current container, skipping...")
 
 try: 
